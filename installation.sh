@@ -104,6 +104,9 @@ sudo make CPPFLAGS=-DALLOW_RTSP_SERVER_PORT_REUSE=1 install
 # clone the rtsp server's git repository, compile and install
 sudo apt-get install git
 git clone https://github.com/mpromonet/v4l2rtspserver.git
+# now requires  libasound2-dev as dependance to cmake - audio added 
+# this library will take a long time to build
+sudo apt-get -y install libasound2-dev
 cd v4l2rtspserver
 cmake . && make
 sudo make install
